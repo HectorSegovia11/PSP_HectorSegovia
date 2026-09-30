@@ -17,7 +17,6 @@ int main() {
             resultado += i;
         }
         printf("P2 Mi PID es %d y el PID de mi padre es %d y el resultado de la sucecion de 1..100 es de %d\n", getpid(), getppid(),resultado);
-        exit(0);
     } 
     else {
         pid_2 = fork();
@@ -30,11 +29,11 @@ int main() {
                 resultado += i;
             }
             printf("P2 Mi PID es %d y el PID de mi padre es %d y el resultado de la sucecion de 101..200 es de %d\n", getpid(), getppid(),resultado);
-            exit(0);
+        } else {
+            wait(NULL);     
         }
+        wait(NULL);   
         
-        wait(NULL);
-        wait(NULL);
         printf("Todos los calculos han terminado \n");
 
     }
