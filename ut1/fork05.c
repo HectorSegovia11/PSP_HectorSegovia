@@ -14,11 +14,10 @@ int main() {
         if (pid_2 == 0)
         {
             printf("P3 Mi PID es %d y el PID de mi padre es %d\n", getpid(), getppid());
-            exit(0);
+        } else {
+             wait(NULL);
         }
-        wait(NULL);
-        printf("P2 Mi PID es %d y el PID de mi padre es %d\n", getpid(), getppid());
-        exit(0);
+        printf("P2 Mi PID es %d y el PID de mi padre es %d\n", getpid(), getppid());  
     } 
     else {
         wait(NULL);
