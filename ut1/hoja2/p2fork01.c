@@ -75,4 +75,4 @@ int main() {
     return 0;
 }
 //a) ¿Cuál será el orden de ejecución de los procesos?¿Será siempre el mismo? Justifica la respuesta
-// Se ejecutara siempre en el siguiente orden P2 P4 P3 P1 ya que primero se hace fork de p1 y hasta que no acaba p2 p1 no puede seguir p1 crea p3 y p3 a p4 y como p4 no tiene hijos es el siguiente en terminar luego p3 al quedarse sin hijo y por ultimo p1
+// Podra haber 3 ordenes de ejecucion diferentes que mueran en este orden P2-P4-P3-P1 en este P4-P3-P2-P1 o en este P4-P2-P3-P1 ya que tanto p2 como p4 no tienen hijos a si que cualquiera de ellos puede ser el primero en morir y si muere primero el p4 p3 se queda sin hijo por lo que tambien se une a la pelea con p2 por ver quien muere
