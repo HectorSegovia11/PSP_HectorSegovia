@@ -27,6 +27,7 @@ void main(){
                 printf("Soy el proceso hijo con pid: %d \n", getpid());
                 read(fd[0], buffer, 100);
                 printf("\t Fecha y hora:  %s \n", buffer);
+                close(fd[0]);
      
      }
      
@@ -37,6 +38,7 @@ void main(){
                 char mensaje[100];
                 snprintf(mensaje,sizeof(mensaje), "%s", fecha);
                 write(fd[1], mensaje, 100);  
+                close(fd[1]);
                 wait(NULL);    
      }
      
