@@ -14,6 +14,6 @@ int main() {
     signal(SIGALRM, alarma);
     alarm(5);
 
-    while (1) pause();
+    pause();
     return 0;
 }
