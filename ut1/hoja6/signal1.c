@@ -16,6 +16,6 @@ int main() {
     time_t t = time(NULL);
     printf("Inicio del proceso %d: %s", getpid(), ctime(&t));
 
-    while (1) pause();
+    pause();
     return 0;
 }
